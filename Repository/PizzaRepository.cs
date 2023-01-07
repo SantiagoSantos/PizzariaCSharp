@@ -6,7 +6,7 @@ namespace PizzariaCSharp.Repository
 {
     public class PizzaRepository : IGenericRepository<Pizza>
     {
-        private List<Pizza> _pizzas;
+        private List<Pizza> _pizzas = new();
         private int _UltimoId = 0;
 
         public Pizza Adicionar(Pizza pizza)

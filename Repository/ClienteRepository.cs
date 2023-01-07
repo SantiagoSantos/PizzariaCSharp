@@ -6,7 +6,7 @@ namespace PizzariaCSharp.Repository
 {
     public class ClienteRepository : IGenericRepository<Cliente>
     {
-        private List<Cliente> _clientes;
+        private List<Cliente> _clientes = new();
         private int _UltimoId = 0;
         
         public ClienteRepository()

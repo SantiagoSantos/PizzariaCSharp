@@ -6,7 +6,7 @@ namespace PizzariaCSharp.Repository
 {
     public class PedidoRepository : IGenericRepository<Pedido>
     {
-        private List<Pedido> _pedidos;
+        private List<Pedido> _pedidos = new();
         private int _UltimoId = 0;
 
         public Pedido Adicionar(Pedido pedido)

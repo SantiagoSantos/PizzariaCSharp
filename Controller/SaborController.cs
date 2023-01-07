@@ -4,32 +4,32 @@ using PizzariaCSharp.Repository.Interfaces;
 
 namespace PizzariaCSharp.Controller
 {
-    public class ItemController : IGenericController<Item>
+    public class SaborController : IGenericController<Sabor>
     {
-        private IGenericRepository<Item> _repository;
+        private IGenericRepository<Sabor> _repository;
 
-        public ItemController(IGenericRepository<Item> repository)
+        public SaborController(IGenericRepository<Sabor> repository)
         {
             _repository = repository;
         }
 
-        public Item Adicionar(Item item)
+        public Sabor Adicionar(Sabor sabor)
         {
-            return _repository.Adicionar(item);
+            return _repository.Adicionar(sabor);
         }
 
-        public Item Atualizar(int id, Item item)
+        public Sabor Atualizar(int id, Sabor sabor)
         {
-            item.Id = id;
-            return _repository.Atualizar(item);
+            sabor.Id = id;
+            return _repository.Atualizar(sabor);
         }
 
-        public Item ObterPorId(int id)
+        public Sabor ObterPorId(int id)
         {
             return _repository.ObterPorId(id);
         }
 
-        public List<Item> ObterTodos()
+        public List<Sabor> ObterTodos()
         {
             return _repository.ObterTodos();
         }
